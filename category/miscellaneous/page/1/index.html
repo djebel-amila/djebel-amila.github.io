@@ -4,8 +4,9 @@
 </style><link rel="stylesheet" id="twentytwenty-print-style-css" href="https://julienmercier.ch/wp-content/themes/twentytwenty/print.css" media="print"><script src="https://julienmercier.ch/wp-includes/js/jquery/jquery.js"></script><script src="https://julienmercier.ch/wp-includes/js/jquery/jquery-migrate.min.js"></script><script>
 var cssTarget = {"Bodhi":"img.svg","ForceInlineSVG":"svg"};
 var ForceInlineSVGActive = "true";
-</script><script src="https://julienmercier.ch/wp-content/plugins/svg-support/js/min/svgs-inline-min.js"></script><script src="https://julienmercier.ch/wp-content/themes/twentytwenty/assets/js/index.js" async></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script><script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js" type="text/javascript"></script><link rel="stylesheet" href=""><script src="https://unpkg.com/swiper/js/swiper.js"></script><script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style id="wp-custom-css">
-			html,body {
+</script><script src="https://julienmercier.ch/wp-content/plugins/svg-support/js/min/svgs-inline-min.js"></script><script src="https://julienmercier.ch/wp-content/themes/twentytwenty/assets/js/index.js" async></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script><script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js" type="text/javascript"></script><link rel="stylesheet" href=""><script src="https://unpkg.com/swiper/js/swiper.js"></script><script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://julienmercier.ch/wp-content/uploads/2020/05/favicon.ico" sizes="32x32"><link rel="icon" href="https://julienmercier.ch/wp-content/uploads/2020/05/favicon.ico" sizes="192x192"><link rel="apple-touch-icon" href="https://julienmercier.ch/wp-content/uploads/2020/05/favicon.ico"><meta name="msapplication-TileImage" content="https://julienmercier.ch/wp-content/uploads/2020/05/favicon.ico"><style id="wp-custom-css">
+			/* General site styling */
+html,body {
    font-family: 'Apax', helvetica, arial, sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 3 */
     -webkit-text-size-adjust: 100%; /* 3 */
@@ -28,7 +29,6 @@ button{
 .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
     padding: 0px;
 }
-
 .elementor-2 .elementor-element.elementor-element-1f3ceae9 {
 	 margin-left: 20px;
     margin-bottom: 0px;
@@ -49,12 +49,30 @@ p{
 	width:100%;
 	height:100vh;
 }
+
 #site-header {
     background: #fff;
     position: relative;
 	  display:none;
 }
-	
+#site-footer {
+   display:none;
+    /* padding: 4.3rem 0; */
+}
+small {
+    font-size: 0.75em;
+    display: flex;
+	  padding-bottom:15px
+}
+.topnav a.icon {
+  background: transparent;
+  display:flex;
+  position: absolute;
+  left: 0;
+	margin:0px;
+	right:30;
+  top: 0;
+}
 .skip-link {
     left: -9999rem;
     top: 2.5rem;
@@ -63,6 +81,7 @@ p{
     display: none !important;
     visibility: hidden;
 }
+
 h1 {
     font-size: 1.35em;
     letter-spacing: 0.08em;
@@ -70,6 +89,13 @@ h1 {
     font-weight: 300;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, h4, h5, h6, .faux-heading {
+    font-feature-settings: "lnum";
+    font-variant-numeric: lining-nums;
+    font-weight: 700;
+    letter-spacing: -0.0415625em;
+    margin: 3rem 0 0rem;
 }
 
 em{
@@ -81,59 +107,34 @@ body {
 	  font-size:initial;
 }
 
-.info-button {
-    position: absolute;
-    overflow: hidden;
-    top: 10px;
-    left: 10px;
-    z-index: 10000;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.info-container {
-    width: auto;
-    height: auto;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;}
-.swiper-pagination{
-	 position: fixed;
-	display:flex;
-    top: auto;
-    left: 10px;
-    bottom: 10px;
-    z-index: 23;
-    width: auto;
-    height: auto;
-    min-height: 30px;
-   background: rgba(247,247,247,0.9);
-    border: solid 1px #D9D9D9;
-    border-radius: 1px;
-	  padding:13px;
-    float: right;
-    -webkit-transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -o-transition: opacity .25s ease-in-out;
-    transition: opacity .25s ease-in-out;
-	margin-left: 15px;
-  margin-bottom: 15px;
-	padding-top:8px;
-	padding-bottom:8px;
+a, a code {
+    color: inherit;
+    text-decoration: none;
+}
+ .wp-post-image:hover {
+    opacity: 0.5 !important;
+}
+ a:hover {
+    opacity: 0.5 !important;
+}
+a:active,a:active code {
+    opacity: .75;
+}
+.small{
+    font-weight: inherit;
+    font-size: 0.65em;
+    font-variant-numeric: tabular-nums;
+    -moz-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
 }
 
-.album-title{
-	margin-left:30px;
-	margin-top:-1px;
-}
-.album-info-text {
-margin-left: 10px;
-	margin-top:auto;
-	align-content    background: rgba(247,247,247,0.9);
-    float: right;
-    -webkit-transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -o-transition: opacity .25s ease-in-out;
-    transition: opacity .25s ease-in-out;
-}
-
+/*styling for close caption and capions */
 
 .close-project{
 	height:5vh;
@@ -162,15 +163,12 @@ margin-left: 10px;
 .close-caption:hover{
 	opacity:0.5;
 }
-.topics {
-    display: inline-block;
-    margin-bottom: 15px;
-	  margin-top:-2px;
-}
 
 .skip-link .screen-reader-text{
 	display:none !important;
 }
+
+/*styling for homepage categories */
 button.button {
     font: inherit;
     letter-spacing: 0.07em;
@@ -184,7 +182,7 @@ button.button {
 	  color:inherit;
 	 text-align:left;
 	margin:auto;
-position:relative;
+	position:relative;
 	color:black !important;
 }
 .typeface, .editorial, .posters, .scenography, .video, .photography, .website, .miscellaneous { 
@@ -195,7 +193,6 @@ position:relative;
 	text-decoration:none;
 
 }
-
 .button:hover{
 	text-decoration:none;
 	opacity:0.5;
@@ -232,24 +229,8 @@ position:relative;
 .button-group .button:last-child { 
     padding-right: 0px; 
 }
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-a, a code {
-    color: inherit;
-    text-decoration: none;
-}
- .wp-post-image:hover {
-    opacity: 0.5 !important;
-}
- a:hover {
-    opacity: 0.5 !important;
-}
-a:active,a:active code {
-    opacity: .75;
-}
+
+/*styling for element items in grid*/
 .element-item {
     position: relative;
     float: left;
@@ -263,17 +244,24 @@ a:active,a:active code {
     margin: 0;
     padding: 0;
 }
-
-
-
-.small{
-    font-weight: inherit;
-    font-size: 0.65em;
-    font-variant-numeric: tabular-nums;
-    -moz-font-feature-settings: "tnum";
-    -webkit-font-feature-settings: "tnum";
-    font-feature-settings: "tnum";
+.grid {
+    position: relative;
+	  margin-top:0px;
 }
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.topics {
+    display: inline-block;
+    margin-bottom: 15px;
+	  margin-top:-2px;
+}
+
+
 .fa-plus:before {
     content: "\f067";
     margin-left: 10px;
@@ -288,18 +276,8 @@ a:active,a:active code {
 .typeface, .editorial, .posters, .scenography, .video, .photography, .website, .miscellaneous { 
     background: none; 
 }
-.grid {
-    position: relative;
-	  margin-top:0px;
-}
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
 
 /* style accordion bio top */
-
 input {
   position: absolute !important;
   opacity: 0;
@@ -380,8 +358,6 @@ input:checked ~ .tab-content {
     padding-top: .6em;
 	 margin-bottom:40px;
 }
-
-
 .small{
 font-weight: inherit;
     font-size: 0.65em;
@@ -390,6 +366,9 @@ font-weight: inherit;
     -webkit-font-feature-settings: "tnum";
     font-feature-settings: "tnum";
 }
+
+
+
 /* Start: Recommended Isotope styles */
  
 /**** Isotope Filtering ****/
@@ -461,13 +440,13 @@ font-weight: inherit;
 }
 
 
+
+ 
+/**** swiper settings ****/
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
     right: 10px;
-    left: auto;
-	
+    left: auto;	
 }
-
-
 .swiper-button-next, .swiper-button-prev {
     position: fixed !important;
     top: 50%;
@@ -530,7 +509,7 @@ font-weight: inherit;
     box-sizing: content-box;
 }
 
-    .swiper-slide {
+.swiper-slide {
 			margin-right: 0px;
      text-align: center;
     background: none;
@@ -549,6 +528,9 @@ font-weight: inherit;
 			height:100vh;
 			margin:auto;
     }
+
+
+/**** swiper individual image setting ****/
 .post-50 #img2{
 	height:90%;
 }
@@ -592,7 +574,8 @@ font-weight: inherit;
 .post-109 #img8{
 	height:90%;
 }
-
+ 
+/**** swiper image settings ****/
 .swiper-slide>img{
 height: 100%;
     width: auto;
@@ -629,6 +612,7 @@ span.swiper-pagination{	color:red;
       background: black;
     }
 
+/**** Hamburger and info block settings ****/
 
  .album-info-block {
     top: auto;
@@ -652,25 +636,6 @@ span.swiper-pagination{	color:red;
 	 margin-left:15px;
 	 margin-bottom:15px;
 }
-
-#site-footer {
-   display:none;
-    /* padding: 4.3rem 0; */
-}
-small {
-    font-size: 0.75em;
-    display: flex;
-	  padding-bottom:15px
-}
-.topnav a.icon {
-  background: transparent;
-  display:flex;
-  position: absolute;
-  left: 0;
-	margin:0px;
-	right:30;
-  top: 0;
-}
 .icon{
 	margin-left:15px !important;
 	padding-top:0px;
@@ -689,7 +654,8 @@ opacity:0.5}
     margin-top: 5rem;
     display: none;
 }
-/* width */
+/* Custom scrollbar */
+/* width*/
 ::-webkit-scrollbar {
 width:5px;
 	scrollbar-width: thin;
@@ -717,12 +683,8 @@ width:5px;
 ::-webkit-scrollbar-thumb:hover {
   background: black; 
 }
-scroller {
-  width: 5px;
-  height: auto;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-}
+
+/*styling for menu  in caption, swiper pagination and caption*/
 #menu-navs{
 	display:none;
 }
@@ -745,6 +707,58 @@ p.names {
 .names:hover{
 	opacity:0.5
 }
+.info-button {
+    position: absolute;
+    overflow: hidden;
+    top: 10px;
+    left: 10px;
+    z-index: 10000;
+}
+.info-container {
+    width: auto;
+    height: auto;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;}
+
+.swiper-pagination{
+	 position: fixed;
+	display:flex;
+    top: auto;
+    left: 10px;
+    bottom: 10px;
+    z-index: 23;
+    width: auto;
+    height: auto;
+    min-height: 30px;
+   background: rgba(247,247,247,0.9);
+    border: solid 1px #D9D9D9;
+    border-radius: 1px;
+	  padding:13px;
+    float: right;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+	margin-left: 15px;
+  margin-bottom: 15px;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+.album-title{
+	margin-left:30px;
+	margin-top:-1px;
+}
+.album-info-text {
+margin-left: 10px;
+	margin-top:auto;
+	align-content    background: rgba(247,247,247,0.9);
+    float: right;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
  .album-menu-blocks {
   position: absolute;
     bottom: 38px;
@@ -762,23 +776,13 @@ p.names {
     display:block;
     text-align: initial;
 }
-    z-index: 10;
-    color: #000000;
-    overflow-y: scroll;
-}
+
 .menus a:hover{
 	opacity:0.5;
 	
 }
-h1, h2, h3, h4, h5, h6, .faux-heading {
-    font-feature-settings: "lnum";
-    font-variant-numeric: lining-nums;
-    font-weight: 700;
-    letter-spacing: -0.0415625em;
-    line-height: 1.25;
-    margin: 3rem 0 0rem;
-}
 
+/*Screen setting for iphone, ipad and smaller screen*/
 @media only screen and 
 (min-width: 50px)and
 (max-width: 710px) {
@@ -1031,7 +1035,8 @@ and (max-device-width : 667px) { 	.element-item .name {
 
 			</footer><script type="text/javascript">
 		/* <![CDATA[ */
-				   var $grid = $('.grid').isotope({
+			// Isotope functions	   
+var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
   layoutMode: 'fitRows',
   getSortData: {
@@ -1071,7 +1076,7 @@ $('#filters').on( 'click', 'button', function() {
 
 
 
-
+// swiper functions
  var swiper = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
@@ -1091,9 +1096,7 @@ swiper.on('slideChange', function () {
 $(".swiper-pagination").css("display","flex");
 $("#menu-navs").fadeOut();
 });
-
-
-
+// enabling swiper keyboard function
 $(window).on('load', function () {
 $(".swiper-pagination").css("display","none")
 $(document).on('keyup',function(evt) {
@@ -1112,6 +1115,7 @@ $(document).ready(function(){
     $(".is-checked").css("color","grey");
   });
 	
+// add unique ids to slider images
 	var index=0;
 	$(".image-preview").each( function(){    $(this).attr("id", "img" + index++);
 });
